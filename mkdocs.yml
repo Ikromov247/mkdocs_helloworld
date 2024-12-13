@@ -1,1 +1,55 @@
 site_name: Docker Basics
+site_url: https://ikromov247.github.io/mkdocs_helloworld/
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+      primary: green
+      accent: deep purple
+
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+      primary: blue
+      accent: deep orange
+  
+  font: 
+    text: Roboto
+    code: JetBrains Mono
+  logo: ./assets/recsino.png
+
+  features:
+    - navigation.footer
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+        custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+extra:
+  social:
+    - icon: simple/github
+      link: https://github.com/Ikromov247
+    - icon: simple/4chan
+      link: htpps://4chan.org
